@@ -1,5 +1,5 @@
 //
-//  UpVoteControl.swift
+//  UpvoteControl.swift
 //  Raúl Riera
 //
 //  Created by Raúl Riera on 26/04/2015.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class UpVoteControl: UIControl {    
+public class UpvoteControl: UIControl {
     /**
     The current count value
     
@@ -35,7 +35,7 @@ public class UpVoteControl: UIControl {
     /**
     The font of the text
     
-    Until Xcode supports @@IBInspectable for UIFonts, this is the only way to change the font of the inner label
+    Until Xcode supports @IBInspectable for UIFonts, this is the only way to change the font of the inner label
     */
     @IBInspectable public var font: UIFont? {
         didSet {

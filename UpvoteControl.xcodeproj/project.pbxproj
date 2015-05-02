@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4CFADFF41AF50A7C008D9072 /* UpvoteControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CFADFF31AF50A7C008D9072 /* UpvoteControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CFAE00B1AF50A98008D9072 /* UpVoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE00A1AF50A98008D9072 /* UpVoteControl.swift */; };
+		4CFAE00B1AF50A98008D9072 /* UpvoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE00A1AF50A98008D9072 /* UpvoteControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4CFADFEE1AF50A7C008D9072 /* UpvoteControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpvoteControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFADFF21AF50A7C008D9072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CFADFF31AF50A7C008D9072 /* UpvoteControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpvoteControl.h; sourceTree = "<group>"; };
-		4CFAE00A1AF50A98008D9072 /* UpVoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpVoteControl.swift; sourceTree = "<group>"; };
+		4CFAE00A1AF50A98008D9072 /* UpvoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				4CFADFF31AF50A7C008D9072 /* UpvoteControl.h */,
-				4CFAE00A1AF50A98008D9072 /* UpVoteControl.swift */,
+				4CFAE00A1AF50A98008D9072 /* UpvoteControl.swift */,
 				4CFADFF11AF50A7C008D9072 /* Supporting Files */,
 			);
 			path = UpvoteControl;
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CFAE00B1AF50A98008D9072 /* UpVoteControl.swift in Sources */,
+				4CFAE00B1AF50A98008D9072 /* UpvoteControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +289,7 @@
 				4CFAE0061AF50A7C008D9072 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
