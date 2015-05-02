@@ -17,7 +17,7 @@ public class UpvoteControl: UIControl {
     */
     @IBInspectable public var count: Int = 0 {
         didSet {
-            countLabel.text = "▲\n\(count)"
+            updateCountLabel()
         }
     }
     
@@ -29,6 +29,12 @@ public class UpvoteControl: UIControl {
     @IBInspectable public var shadow: Bool = false {
         didSet {
             updateLayer()
+        }
+    }
+    
+    @IBInspectable public var vertical: Bool = true {
+        didSet {
+            updateCountLabel()
         }
     }
     
@@ -120,6 +126,14 @@ public class UpvoteControl: UIControl {
             layer.shadowRadius = 0.5
             layer.shadowOffset = CGSize(width: 0, height: 1)
             layer.shadowOpacity = 0.5
+        }
+    }
+    
+    private func updateCountLabel() {
+        if vertical {
+            countLabel.text = "▲\n\(count)"
+        } else {
+            countLabel.text = "▲ \(count)"
         }
     }
 }
