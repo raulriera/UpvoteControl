@@ -17,5 +17,13 @@ github "raulriera/UpvoteControl"
 
 Subclass a UIView with `UpvoteControl` class. Dig into the source code to find all the available options, everything is laid out nicely.
 
+If you are using storyboards you can attach an IBAction to the `.ValueChanged` event
+
+``` swift
+@IBAction func valueDidChange(sender: UpvoteControl) {
+    println(sender.count)
+}
+```
+
 ## About:
 Created by Raul Riera, [@raulriera](http://twitter.com/raulriera)
