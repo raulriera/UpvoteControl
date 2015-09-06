@@ -7,11 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CC631891B9C8401005F7EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC631881B9C8401005F7EE0 /* AppDelegate.swift */; };
+		4CC6318B1B9C8401005F7EE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC6318A1B9C8401005F7EE0 /* ViewController.swift */; };
+		4CC6318E1B9C8401005F7EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC6318C1B9C8401005F7EE0 /* Main.storyboard */; };
+		4CC631901B9C8401005F7EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC6318F1B9C8401005F7EE0 /* Assets.xcassets */; };
+		4CC631931B9C8401005F7EE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC631911B9C8401005F7EE0 /* LaunchScreen.storyboard */; };
+		4CEEC25A1B9C865000FC8C8B /* UpvoteControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CFADFEE1AF50A7C008D9072 /* UpvoteControl.framework */; };
 		4CFADFF41AF50A7C008D9072 /* UpvoteControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CFADFF31AF50A7C008D9072 /* UpvoteControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CFAE00B1AF50A98008D9072 /* UpvoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAE00A1AF50A98008D9072 /* UpvoteControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CC631861B9C8401005F7EE0 /* UpvoteControlExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpvoteControlExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC631881B9C8401005F7EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CC6318A1B9C8401005F7EE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CC6318D1B9C8401005F7EE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CC6318F1B9C8401005F7EE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CC631921B9C8401005F7EE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CC631941B9C8401005F7EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CFADFEE1AF50A7C008D9072 /* UpvoteControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UpvoteControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFADFF21AF50A7C008D9072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CFADFF31AF50A7C008D9072 /* UpvoteControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpvoteControl.h; sourceTree = "<group>"; };
@@ -19,6 +32,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4CC631831B9C8401005F7EE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEEC25A1B9C865000FC8C8B /* UpvoteControl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CFADFEA1AF50A7C008D9072 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +50,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CC631871B9C8401005F7EE0 /* UpvoteControlExample */ = {
+			isa = PBXGroup;
+			children = (
+				4CC631881B9C8401005F7EE0 /* AppDelegate.swift */,
+				4CC6318A1B9C8401005F7EE0 /* ViewController.swift */,
+				4CC6318C1B9C8401005F7EE0 /* Main.storyboard */,
+				4CC6318F1B9C8401005F7EE0 /* Assets.xcassets */,
+				4CC631911B9C8401005F7EE0 /* LaunchScreen.storyboard */,
+				4CC631941B9C8401005F7EE0 /* Info.plist */,
+			);
+			path = UpvoteControlExample;
+			sourceTree = "<group>";
+		};
 		4CFADFE41AF50A7C008D9072 = {
 			isa = PBXGroup;
 			children = (
 				4CFADFF01AF50A7C008D9072 /* UpvoteControl */,
+				4CC631871B9C8401005F7EE0 /* UpvoteControlExample */,
 				4CFADFEF1AF50A7C008D9072 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				4CFADFEE1AF50A7C008D9072 /* UpvoteControl.framework */,
+				4CC631861B9C8401005F7EE0 /* UpvoteControlExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +113,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4CC631851B9C8401005F7EE0 /* UpvoteControlExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC631951B9C8401005F7EE0 /* Build configuration list for PBXNativeTarget "UpvoteControlExample" */;
+			buildPhases = (
+				4CC631821B9C8401005F7EE0 /* Sources */,
+				4CC631831B9C8401005F7EE0 /* Frameworks */,
+				4CC631841B9C8401005F7EE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UpvoteControlExample;
+			productName = UpvoteControlExample;
+			productReference = 4CC631861B9C8401005F7EE0 /* UpvoteControlExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		4CFADFED1AF50A7C008D9072 /* UpvoteControl */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CFAE0041AF50A7C008D9072 /* Build configuration list for PBXNativeTarget "UpvoteControl" */;
@@ -101,9 +154,14 @@
 		4CFADFE51AF50A7C008D9072 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Raul Riera";
 				TargetAttributes = {
+					4CC631851B9C8401005F7EE0 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					4CFADFED1AF50A7C008D9072 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -115,6 +173,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4CFADFE41AF50A7C008D9072;
 			productRefGroup = 4CFADFEF1AF50A7C008D9072 /* Products */;
@@ -122,11 +181,22 @@
 			projectRoot = "";
 			targets = (
 				4CFADFED1AF50A7C008D9072 /* UpvoteControl */,
+				4CC631851B9C8401005F7EE0 /* UpvoteControlExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4CC631841B9C8401005F7EE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC631931B9C8401005F7EE0 /* LaunchScreen.storyboard in Resources */,
+				4CC631901B9C8401005F7EE0 /* Assets.xcassets in Resources */,
+				4CC6318E1B9C8401005F7EE0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CFADFEC1AF50A7C008D9072 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,6 +207,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4CC631821B9C8401005F7EE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC6318B1B9C8401005F7EE0 /* ViewController.swift in Sources */,
+				4CC631891B9C8401005F7EE0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CFADFE91AF50A7C008D9072 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,7 +226,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		4CC6318C1B9C8401005F7EE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC6318D1B9C8401005F7EE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CC631911B9C8401005F7EE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC631921B9C8401005F7EE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		4CC631961B9C8401005F7EE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = UpvoteControlExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.UpvoteControlExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4CC631971B9C8401005F7EE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UpvoteControlExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raulriera.UpvoteControlExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		4CFAE0021AF50A7C008D9072 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -170,6 +293,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -246,6 +370,7 @@
 				INFOPLIST_FILE = UpvoteControl/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raulriera.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -263,6 +388,7 @@
 				INFOPLIST_FILE = UpvoteControl/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raulriera.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -271,6 +397,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4CC631951B9C8401005F7EE0 /* Build configuration list for PBXNativeTarget "UpvoteControlExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC631961B9C8401005F7EE0 /* Debug */,
+				4CC631971B9C8401005F7EE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4CFADFE81AF50A7C008D9072 /* Build configuration list for PBXProject "UpvoteControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

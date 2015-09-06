@@ -13,7 +13,7 @@ public class UpvoteControl: UIControl {
     /**
     The current count value
     
-    The default value for this property is 0, don't assign to this value more than once. It will increment and decrement internally depending of the `selected` property
+    The default value for this property is 0. It will increment and decrement internally depending of the `selected` property
     */
     @IBInspectable public var count: Int = 0 {
         didSet {
@@ -54,7 +54,7 @@ public class UpvoteControl: UIControl {
     
     The default value for this property is a black color (set through the blackColor class method of UIColor).
     */
-    @IBInspectable public var textColor: UIColor = UIColor.blackColor() {
+    @IBInspectable public var textColor: UIColor = .blackColor() {
         didSet {
             countLabel.textColor = textColor
         }
@@ -74,10 +74,10 @@ public class UpvoteControl: UIControl {
     
     // MARK: Overrides
     
-    public override func endTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) {
+    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         super.endTrackingWithTouch(touch, withEvent:event)
         
-        if touch.tapCount > 0 {
+        if let touch = touch where touch.tapCount > 0 {
             if selected {
                 count -= 1
             } else {
@@ -89,7 +89,7 @@ public class UpvoteControl: UIControl {
         }
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configureView()
     }
@@ -99,7 +99,12 @@ public class UpvoteControl: UIControl {
         configureView()
     }
     
+    // MARK: Private
+    
     private func configureView() {
+        // Allow this method to only run once
+        guard countLabel.superview == .None else { return }
+        
         updateLayer()
     
         countLabel = UILabel(frame: bounds)
@@ -109,11 +114,13 @@ public class UpvoteControl: UIControl {
         countLabel.textAlignment = .Center
         countLabel.userInteractionEnabled = false
 
-        countLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        countLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(countLabel)
+
+        let centerXConstraint = NSLayoutConstraint(item: countLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0)
+        let centerYConstraint = NSLayoutConstraint(item: countLabel, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0)
         
-        addConstraint(NSLayoutConstraint(item: countLabel, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: countLabel, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0))
+        NSLayoutConstraint.activateConstraints([centerXConstraint, centerYConstraint])
         
         countLabel.setNeedsDisplay()
     }
