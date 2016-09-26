@@ -9,30 +9,30 @@
 import UIKit
 
 @IBDesignable
-public class UpvoteControl: UIControl {
+open class UpvoteControl: UIControl {
     /**
     The current count value
     
     The default value for this property is 0. It will increment and decrement internally depending of the `selected` property
     */
-    @IBInspectable public var count: Int = 0 {
+    @IBInspectable open var count: Int = 0 {
         didSet {
             updateCountLabel()
         }
     }
     
-    @IBInspectable public var borderRadius: CGFloat = 0 {
+    @IBInspectable open var borderRadius: CGFloat = 0 {
         didSet {
             updateLayer()
         }
     }
-    @IBInspectable public var shadow: Bool = false {
+    @IBInspectable open var shadow: Bool = false {
         didSet {
             updateLayer()
         }
     }
     
-    @IBInspectable public var vertical: Bool = true {
+    @IBInspectable open var vertical: Bool = true {
         didSet {
             updateCountLabel()
         }
@@ -43,7 +43,7 @@ public class UpvoteControl: UIControl {
     
     Until Xcode supports @IBInspectable for UIFonts, this is the only way to change the font of the inner label
     */
-    @IBInspectable public var font: UIFont? {
+    @IBInspectable open var font: UIFont? {
         didSet {
             countLabel.font = font
         }
@@ -54,17 +54,17 @@ public class UpvoteControl: UIControl {
     
     The default value for this property is a black color (set through the blackColor class method of UIColor).
     */
-    @IBInspectable public var textColor: UIColor = .blackColor() {
+    @IBInspectable open var textColor: UIColor = .black {
         didSet {
             countLabel.textColor = textColor
         }
     }
     
-    private var countLabel: UILabel = UILabel()
+    fileprivate var countLabel: UILabel = UILabel()
 
-    override public var selected: Bool {
+    override open var isSelected: Bool {
         didSet {
-            if selected {
+            if isSelected {
                 countLabel.textColor = tintColor
             } else {
                 countLabel.textColor = textColor
@@ -74,18 +74,18 @@ public class UpvoteControl: UIControl {
     
     // MARK: Overrides
     
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        super.endTrackingWithTouch(touch, withEvent:event)
+    open override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        super.endTracking(touch, with:event)
         
-        if let touch = touch where touch.tapCount > 0 {
-            if selected {
+        if let touch = touch , touch.tapCount > 0 {
+            if isSelected {
                 count -= 1
             } else {
                 count += 1
             }
             
-            selected = !selected
-            super.sendActionsForControlEvents(.ValueChanged)
+            isSelected = !isSelected
+            super.sendActions(for: .valueChanged)
         }
     }
     
@@ -101,42 +101,42 @@ public class UpvoteControl: UIControl {
     
     // MARK: Private
     
-    private func configureView() {
+    fileprivate func configureView() {
         // Allow this method to only run once
-        guard countLabel.superview == .None else { return }
+        guard countLabel.superview == .none else { return }
         
         updateLayer()
     
         countLabel = UILabel(frame: bounds)
         countLabel.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 12)
         countLabel.numberOfLines = 0
-        countLabel.lineBreakMode = .ByWordWrapping
-        countLabel.textAlignment = .Center
-        countLabel.userInteractionEnabled = false
+        countLabel.lineBreakMode = .byWordWrapping
+        countLabel.textAlignment = .center
+        countLabel.isUserInteractionEnabled = false
 
         countLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(countLabel)
 
-        let centerXConstraint = NSLayoutConstraint(item: countLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0)
-        let centerYConstraint = NSLayoutConstraint(item: countLabel, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0)
+        let centerXConstraint = NSLayoutConstraint(item: countLabel, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
+        let centerYConstraint = NSLayoutConstraint(item: countLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
         
-        NSLayoutConstraint.activateConstraints([centerXConstraint, centerYConstraint])
+        NSLayoutConstraint.activate([centerXConstraint, centerYConstraint])
         
         countLabel.setNeedsDisplay()
     }
     
-    private func updateLayer() {
+    fileprivate func updateLayer() {
         layer.cornerRadius = borderRadius
         
         if shadow {
-            layer.shadowColor = UIColor.darkGrayColor().CGColor
+            layer.shadowColor = UIColor.darkGray.cgColor
             layer.shadowRadius = 0.5
             layer.shadowOffset = CGSize(width: 0, height: 1)
             layer.shadowOpacity = 0.5
         }
     }
     
-    private func updateCountLabel() {
+    fileprivate func updateCountLabel() {
         if vertical {
             countLabel.text = "▲\n\(count)"
         } else {

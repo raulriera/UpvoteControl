@@ -21,7 +21,7 @@ If you are using storyboards you can attach an IBAction to the `.ValueChanged` e
 
 ``` swift
 @IBAction func valueDidChange(sender: UpvoteControl) {
-    println(sender.count)
+    print(sender.count)
 }
 ```
 
