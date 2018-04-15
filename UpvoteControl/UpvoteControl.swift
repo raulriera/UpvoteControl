@@ -26,6 +26,7 @@ open class UpvoteControl: UIControl {
             updateLayer()
         }
     }
+    
     @IBInspectable open var shadow: Bool = false {
         didSet {
             updateLayer()
@@ -60,7 +61,7 @@ open class UpvoteControl: UIControl {
         }
     }
     
-    fileprivate var countLabel: UILabel = UILabel()
+    private var countLabel: UILabel = UILabel()
 
     override open var isSelected: Bool {
         didSet {
@@ -101,7 +102,7 @@ open class UpvoteControl: UIControl {
     
     // MARK: Private
     
-    fileprivate func configureView() {
+    private func configureView() {
         // Allow this method to only run once
         guard countLabel.superview == .none else { return }
         
@@ -125,7 +126,7 @@ open class UpvoteControl: UIControl {
         countLabel.setNeedsDisplay()
     }
     
-    fileprivate func updateLayer() {
+    private func updateLayer() {
         layer.cornerRadius = borderRadius
         
         if shadow {
@@ -136,7 +137,7 @@ open class UpvoteControl: UIControl {
         }
     }
     
-    fileprivate func updateCountLabel() {
+    private func updateCountLabel() {
         if vertical {
             countLabel.text = "▲\n\(count)"
         } else {
